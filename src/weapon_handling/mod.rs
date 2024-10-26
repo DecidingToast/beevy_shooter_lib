@@ -16,6 +16,7 @@ impl Plugin for WeaponHandlingPlugin
     #[cfg(feature = "editor")]
     fn build(&self, app: &mut App)
     {
+        println!("Registering types with editor registry");
         app.editor_registry::<Recoil>();
     }
 
