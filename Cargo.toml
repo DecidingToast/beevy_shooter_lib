@@ -1,0 +1,30 @@
+[package]
+name = "bevy_shooter_lib"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+path_file_prefix = []
+editor = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies.bevy]
+version = "0.14.2"
+features = [
+    #"dynamic_linking",
+    "meshlet",
+    "meshlet_processor",
+]
+
+[dependencies]
+avian3d = "0.1.2"
+bevy-tnua = "0.20.0"
+bevy-tnua-avian3d = "0.1.1"
+space_editor = {git = "https://github.com/DecidingToast/space_editor.git"}
+
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
