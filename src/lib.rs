@@ -5,8 +5,8 @@ use bevy_tnua_avian3d::TnuaAvian3dPlugin;
 use player::PlayerPlugin;
 use weapon_handling::WeaponHandlingPlugin;
 
-mod weapon_handling;
-mod player;
+pub mod weapon_handling;
+pub mod player;
 
 pub struct GamePlugin;
 
